@@ -1,0 +1,30 @@
+name: Deploy to Server
+ 
+on:
+  push:
+    branches:
+      - my-feature-branch  # or your deployment branch
+ 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+ 
+    - name: Set up SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H ${{ secrets.SERVER_ID }} >> ~/.ssh/known_hosts
+ 
+    - name: Deploy to server
+      run: |
+        ssh ${{ secrets.SERVERUSER }}@${{ secrets.SERVER_ID }} << 'EOF'
+          cd  "c:\Users\Doha\OneDrive\Documents\M2\Dc khodor\News" 
+          git pull origin main
+          docker-compose down
+          docker-compose up -d --build
+        EOF
