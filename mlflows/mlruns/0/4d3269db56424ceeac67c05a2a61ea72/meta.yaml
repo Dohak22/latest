@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Doha/OneDrive/Documents/M2/Dc khodor/start/mlflows/mlruns/0/4d3269db56424ceeac67c05a2a61ea72/artifacts
+end_time: 1743856502942
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4d3269db56424ceeac67c05a2a61ea72
+run_name: trusting-penguin-616
+run_uuid: 4d3269db56424ceeac67c05a2a61ea72
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743856496528
+status: 3
+tags: []
+user_id: Doha

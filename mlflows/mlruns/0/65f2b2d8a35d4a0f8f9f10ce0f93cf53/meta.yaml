@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Doha/OneDrive/Documents/M2/Dc khodor/start/mlflows/mlruns/0/65f2b2d8a35d4a0f8f9f10ce0f93cf53/artifacts
+end_time: 1743856302377
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 65f2b2d8a35d4a0f8f9f10ce0f93cf53
+run_name: upset-bat-91
+run_uuid: 65f2b2d8a35d4a0f8f9f10ce0f93cf53
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743856296648
+status: 3
+tags: []
+user_id: Doha

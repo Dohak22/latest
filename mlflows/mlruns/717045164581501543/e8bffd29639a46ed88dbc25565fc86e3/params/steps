@@ -1,0 +1,2 @@
+[('tfidf', TfidfVectorizer(max_features=5000,
+                preprocessor=<function clean_text at 0x0000012A4386E660>)), ('clf', LogisticRegression())]

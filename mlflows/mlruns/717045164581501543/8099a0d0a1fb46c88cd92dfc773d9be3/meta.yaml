@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Doha/OneDrive/Documents/M2/Dc khodor/start/mlflows/mlruns/717045164581501543/8099a0d0a1fb46c88cd92dfc773d9be3/artifacts
+end_time: 1743845200495
+entry_point_name: ''
+experiment_id: '717045164581501543'
+lifecycle_stage: active
+run_id: 8099a0d0a1fb46c88cd92dfc773d9be3
+run_name: latest_prediction
+run_uuid: 8099a0d0a1fb46c88cd92dfc773d9be3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743845200403
+status: 3
+tags: []
+user_id: Doha

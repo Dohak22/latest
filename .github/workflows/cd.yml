@@ -1,0 +1,45 @@
+name: CD
+
+on:
+  push:
+    branches: [ my-feature-branch ]  # Change to your working branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Add SSH known hosts
+      run: |
+        ssh-keyscan -H ${{ secrets.SERVER_ID }} >> ~/.ssh/known_hosts
+
+    - name: SSH into the server, build and deploy Docker container
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.SERVERUSER }}@${{ secrets.SERVER_ID }} << 'EOF'
+          # Navigate to the correct project directory on the server
+          cd "c:\Users\Doha\OneDrive\Documents\M2\Dc khodor\News"  # Change this to the correct server path
+
+          # Pull the latest changes
+          git pull origin my-feature-branch  
+
+          # Build the Docker image
+          docker build -t fake-news-app:${{ github.sha }} .  # Tag image with the commit SHA for uniqueness
+
+          # Stop and remove the existing container if it exists
+          docker stop fake-news-app || true
+          docker rm fake-news-app || true
+
+          # Run the new container
+          docker run -d --name fake-news-app -p 80:80 fake-news-app:${{ github.sha }}  # Ensure the new tag is used
+        EOF

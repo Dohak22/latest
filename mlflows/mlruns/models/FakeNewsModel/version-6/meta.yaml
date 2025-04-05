@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1743856464594
+current_stage: None
+description: ''
+last_updated_timestamp: 1743856464594
+name: FakeNewsModel
+run_id: c92df80aa15342528bb340274782e41e
+run_link: ''
+source: file:///c:/Users/Doha/OneDrive/Documents/M2/Dc khodor/start/mlflows/mlruns/0/c92df80aa15342528bb340274782e41e/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///c:/Users/Doha/OneDrive/Documents/M2/Dc khodor/start/mlflows/mlruns/0/c92df80aa15342528bb340274782e41e/artifacts/model
+user_id: null
+version: 6

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Doha/OneDrive/Documents/M2/Dc khodor/start/mlflows/mlruns/717045164581501543/32a3a861b568451fa160743bc8d22e05/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '717045164581501543'
+lifecycle_stage: active
+run_id: 32a3a861b568451fa160743bc8d22e05
+run_name: dashing-snipe-761
+run_uuid: 32a3a861b568451fa160743bc8d22e05
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743850201278
+status: 1
+tags: []
+user_id: Doha
