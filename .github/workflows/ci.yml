@@ -29,6 +29,6 @@ jobs:
  
     - name: Check Flask app runs
       run: |
-        python C:\Users\Doha\OneDrive\Documents\M2\Dc khodor\news\Backend\app.py &
+        python Backend\app.py &
         sleep 5
         curl --fail http://127.0.0.1:5000 || exit 1
