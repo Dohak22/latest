@@ -27,7 +27,7 @@ jobs:
     - name: SSH into the server, build and deploy Docker container
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.SERVERUSER }}@${{ secrets.SERVER_ID }} << 'EOF'
-          cd "c:\Users\Doha\OneDrive\Documents\M2\Dc khodor\start"
+          cd "c:\Users\Doha\OneDrive\Documents\M2\Dc khodor\NEWS"
           git pull origin my-feature-branch
           docker build -t fake-news-app:${{ github.sha }} .
           docker stop fake-news-app || true
