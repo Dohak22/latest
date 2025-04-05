@@ -1,3 +1,5 @@
+
+pip install mlflow
 from flask import Flask, render_template, request, jsonify
 import mlflow
 import mlflow.sklearn
